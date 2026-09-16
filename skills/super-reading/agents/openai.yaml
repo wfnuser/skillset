@@ -1,0 +1,4 @@
+interface:
+  display_name: "Super Reading"
+  short_description: "Create fixed three-page paper-reading slides"
+  default_prompt: "Create exactly three Super Reading pages: problem and idea, concrete solution and novelty, experimental results."

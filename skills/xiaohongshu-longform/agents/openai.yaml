@@ -1,0 +1,7 @@
+interface:
+  display_name: "小红书连续长图文"
+  short_description: "把长文章自然分页为连续阅读的小红书图文"
+  default_prompt: "Use $xiaohongshu-longform to compile this finished article into a continuous-reading Xiaohongshu carousel."
+
+policy:
+  allow_implicit_invocation: true

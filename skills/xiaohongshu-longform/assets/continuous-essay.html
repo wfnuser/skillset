@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>连续文章｜小红书图文模板</title>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']] },
+      svg: { fontCache: 'local' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root {
+      --paper: #f8f7f2;
+      --ink: #1d1d1d;
+      --muted: #77736c;
+      --body-pages: 2;
+      --reader-width: 900px;
+      --reader-height: 1070px;
+      --column-gap: 120px;
+      --serif: "Songti SC", "Noto Serif CJK SC", "STSong", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      padding: 48px;
+      background: #d8d6d0;
+      color: var(--ink);
+      font-family: var(--serif);
+    }
+    .sheet { display: grid; justify-content: center; gap: 48px; }
+    .poster {
+      position: relative;
+      width: 1080px;
+      height: 1440px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    .content {
+      height: 100%;
+      padding: 82px 90px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Cover: replace text; keep one dominant idea. */
+    .cover .content { padding: 90px 90px 61px; }
+    .cover-series {
+      font: 500 20px/1 var(--sans);
+      letter-spacing: .1em;
+      color: var(--muted);
+    }
+    .cover-title {
+      max-width: 880px;
+      margin: 230px 0 0;
+      font: 700 84px/1.2 var(--serif);
+      letter-spacing: -.025em;
+    }
+    .cover-subtitle {
+      max-width: 820px;
+      margin: 48px 0 0;
+      font: 400 34px/1.65 var(--serif);
+      color: #333;
+    }
+    .cover-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--sans);
+      color: var(--muted);
+    }
+    .cover-swipe { font-size: 34px; font-weight: 500; }
+    .page-no { font-size: 17px; line-height: 1; }
+
+    /* Life Integration (Weekly): stable weekly-integral-v1 cover contract. */
+    .cover.weekly-cover {
+      -webkit-font-smoothing: auto;
+      -moz-osx-font-smoothing: auto;
+    }
+    .cover.weekly-cover .content { padding: 96px 88px 87px; }
+    .weekly-cover .cover-series {
+      font: 500 22px/1 var(--sans);
+      letter-spacing: .12em;
+    }
+    .weekly-cover .cover-title.cover-formula {
+      max-width: 904px;
+      height: 296px;
+      margin: 210px 0 0;
+      font: 400 78px/1.18 "Times New Roman", serif;
+      letter-spacing: -.025em;
+      white-space: nowrap;
+    }
+    .weekly-cover .cover-title.cover-formula mjx-container { margin: 0 !important; }
+    .weekly-cover .cover-subtitle {
+      max-width: 904px;
+      margin-top: 52px;
+      font: 400 38px/1.65 var(--serif);
+      white-space: nowrap;
+    }
+    .weekly-cover .cover-date {
+      font: inherit;
+      letter-spacing: inherit;
+    }
+    .weekly-cover .cover-swipe {
+      font-size: 42px;
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+    .weekly-cover .page-no { font-size: 17px; line-height: 1; }
+
+    /* Every body page exposes the same-sized window into one article stream. */
+    .reader-head {
+      display: flex;
+      justify-content: space-between;
+      font: 400 18px/1 var(--sans);
+      letter-spacing: .06em;
+      color: var(--muted);
+    }
+    .reader-window {
+      width: var(--reader-width);
+      height: var(--reader-height);
+      margin-top: 50px;
+      overflow: hidden;
+    }
+    .reader-stream {
+      --flow-page: 0;
+      width: var(--stream-width, 1920px);
+      height: var(--reader-height);
+      column-count: var(--body-pages);
+      column-gap: var(--column-gap);
+      column-fill: auto;
+      transform: translateX(var(--flow-offset, 0));
+      font: 400 34px/1.68 var(--serif);
+      letter-spacing: .012em;
+      color: #222;
+    }
+    .reader-stream p { margin: 0 0 24px; }
+    .reader-stream strong { font-weight: 700; }
+    .article-section {
+      margin: 44px 0 30px;
+      font: 600 54px/1.22 var(--serif);
+      break-after: avoid;
+    }
+    .article-section:first-child { margin-top: 0; }
+    .article-subsection {
+      margin: 36px 0 18px;
+      font: 700 35px/1.45 var(--serif);
+      break-after: avoid;
+    }
+    .reader-figure { margin: 22px 0 24px; break-inside: avoid; }
+    .reader-image {
+      display: block;
+      width: 92%;
+      max-height: 680px;
+      margin: 0 auto 12px;
+      object-fit: contain;
+    }
+    .reader-caption {
+      margin: 0;
+      text-align: center;
+      font: 400 18px/1.4 var(--sans);
+      color: var(--muted);
+    }
+    .reader-page {
+      margin-top: auto;
+      padding-top: 26px;
+      text-align: right;
+      font: 400 17px/1 var(--sans);
+      color: #8a867e;
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet" id="sheet">
+    <section class="poster cover" id="xhs-01">
+      <div class="content">
+        <div class="cover-series">SERIES · ISSUE</div>
+        <h1 class="cover-title">文章标题</h1>
+        <p class="cover-subtitle">一行克制的副标题</p>
+        <div class="cover-footer">
+          <div class="cover-swipe">左滑阅读 →</div>
+          <div class="page-no" data-cover-page></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Keep the canonical order here. Do not create one article per page. -->
+  <template id="article-flow-source">
+    <article class="reader-stream">
+      <h2 class="article-section">第一个真实章节</h2>
+      <p>将完整正文依照母稿顺序放在同一个 article 中。页面只是等高的阅读窗口，不是独立卡片。</p>
+      <p>正文可以自然跨页，标题只在原文真正出现的位置展示。需要强调时，只加粗<strong>关键短语</strong>。</p>
+      <h3 class="article-subsection">图片示例</h3>
+      <p>语义相关的图片紧跟对应段落；没有明确锚点的图片可以均匀分布，但不作为填充空白的装饰。</p>
+      <!--
+      <figure class="reader-figure">
+        <img class="reader-image" src="assets/example.png" alt="图片说明">
+        <figcaption class="reader-caption">简短图注</figcaption>
+      </figure>
+      -->
+      <p>继续粘贴后续章节和段落，直到文章结束。渲染后调整 BODY_PAGES，使最后一页充实且不溢出。</p>
+      <h2 class="article-section">第二个真实章节</h2>
+      <p>换页不等于换章节。当前一页写满之后，下一页直接从余下的文字继续，不需要额外补一个标题，也不需要把上一段整体推到下一页。</p>
+      <p>正文页顶部可以保留很轻的系列名与日期，让读者知道自己正在阅读哪一期；它们只是运行页眉，不能抢走正文的注意力。</p>
+      <p>所有正文页使用相同的阅读窗口高度。不要因为某一页恰好出现小标题，就缩小这一页的正文区域，也不要让图片页拥有完全不同的上下边距。</p>
+      <h3 class="article-subsection">怎样调整分页</h3>
+      <p>先完整渲染，再查看联系表。如果最后一页留白太多，优先减少 BODY_PAGES；如果末尾文字消失或溢出，则增加一页。不要逐页手工复制和剪切段落。</p>
+      <p>图片会占据正文流中的垂直空间。与某段文字直接相关的图片应放在对应段落附近，并使用不会裁掉信息的 contain 模式。</p>
+      <p>如果图片没有明确锚点，可以把它放在内容相近、页面密度合适的位置；如果它并没有增加信息，就宁可不放。</p>
+      <h3 class="article-subsection">最后检查</h3>
+      <p>逐页确认文章顺序没有改变，标题没有在换页时重复，页码包含封面，正文没有被裁切，页面下方也没有意外出现大片空白。</p>
+      <p>模板只负责稳定地承载文章。真正的节奏、语气和重点，仍然来自那一份唯一的博客母稿。</p>
+    </article>
+  </template>
+
+  <script>
+    (() => {
+      const BODY_PAGES = 2;
+      const SERIES = "SERIES · ISSUE";
+      const DATE_RANGE = "YYYY.MM.DD—MM.DD";
+      const total = BODY_PAGES + 1;
+      const sheet = document.getElementById("sheet");
+      const source = document.getElementById("article-flow-source");
+      document.documentElement.style.setProperty("--body-pages", BODY_PAGES);
+      document.querySelector("[data-cover-page]").textContent = `01 / ${String(total).padStart(2, "0")}`;
+
+      for (let index = 0; index < BODY_PAGES; index += 1) {
+        const page = document.createElement("section");
+        page.className = "poster reader-card";
+        page.id = `xhs-${String(index + 2).padStart(2, "0")}`;
+        page.innerHTML = `
+          <div class="content">
+            <div class="reader-head"><span>${SERIES}</span><span>${DATE_RANGE}</span></div>
+            <div class="reader-window"></div>
+            <div class="reader-page">${String(index + 2).padStart(2, "0")} / ${String(total).padStart(2, "0")}</div>
+          </div>`;
+        const stream = source.content.firstElementChild.cloneNode(true);
+        stream.style.setProperty("--flow-page", index);
+        stream.style.setProperty("--stream-width", `${BODY_PAGES * 900 + (BODY_PAGES - 1) * 120}px`);
+        stream.style.setProperty("--flow-offset", `${index * -1020}px`);
+        page.querySelector(".reader-window").appendChild(stream);
+        sheet.appendChild(page);
+      }
+    })();
+  </script>
+</body>
+</html>
