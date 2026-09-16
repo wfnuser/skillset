@@ -4,11 +4,22 @@ Personal Agent Skills maintained by [wfnuser](https://github.com/wfnuser). Each 
 
 ## Included Skills
 
+### Writing
+
+| Skill | Purpose |
+| --- | --- |
+| `personal-blog-writing` | Draft, restructure, or lightly polish a personal Chinese blog article while preserving the author's voice. |
+| `life-integration-weekly` | Turn Logseq bullets and weekly fragments into a concise Life Integration / PhD Weekly article. |
+
+### Publishing and artifacts
+
 | Skill | Purpose |
 | --- | --- |
 | `xiaohongshu-longform` | Compile long-form prose into a continuous-reading Xiaohongshu carousel with natural pagination and recurring series presets. |
 | `super-reading` | Produce a fixed three-page paper-reading deck and matching HTML explainer. |
 | `storage-analyzer` | Analyze macOS or Windows disk usage and generate a safe, interactive cleanup report. |
+
+The writing Skills produce or refine the canonical article. Presentation Skills consume an approved article or analysis and generate a derivative artifact. Continuous long-form pages belong to `xiaohongshu-longform`; discrete knowledge or promotional cards should use a dedicated social-card Skill such as [`guizang-social-card-skill`](https://github.com/op7418/guizang-social-card-skill) rather than being mixed into the long-form compiler.
 
 ## Install
 

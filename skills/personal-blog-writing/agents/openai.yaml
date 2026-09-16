@@ -1,0 +1,7 @@
+interface:
+  display_name: "个人博客写作润色"
+  short_description: "保留个人语气，起草或轻量润色中文博客"
+  default_prompt: "Use $personal-blog-writing to draft or polish this personal blog article while keeping my original voice and facts primary."
+
+policy:
+  allow_implicit_invocation: true
