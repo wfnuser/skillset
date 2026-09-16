@@ -3,7 +3,7 @@ set -euo pipefail
 
 npx -y skills update \
   personal-blog-writing \
-  life-integration-weekly \
+  life-integration-writing \
   xiaohongshu-longform \
   super-reading \
   storage-analyzer \

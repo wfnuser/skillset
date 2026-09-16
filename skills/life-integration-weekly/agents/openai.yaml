@@ -1,7 +1,0 @@
-interface:
-  display_name: "Life Integration Weekly"
-  short_description: "把每周碎片整理为简短的个人周记"
-  default_prompt: "Use $life-integration-weekly to turn these weekly notes into a concise article organized as 输入、研究、工作、生活."
-
-policy:
-  allow_implicit_invocation: true

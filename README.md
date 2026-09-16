@@ -9,7 +9,7 @@ Personal Agent Skills maintained by [wfnuser](https://github.com/wfnuser). Each 
 | Skill | Purpose |
 | --- | --- |
 | `personal-blog-writing` | Draft, restructure, or lightly polish a personal Chinese blog article while preserving the author's voice. |
-| `life-integration-weekly` | Turn Logseq bullets and weekly fragments into a concise Life Integration / PhD Weekly article. |
+| `life-integration-writing` | Turn diaries, Logseq fragments, photos, and activity records into weekly, monthly, annual, milestone, or other personal life summaries. |
 
 ### Publishing and artifacts
 
