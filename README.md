@@ -67,3 +67,7 @@ Generated artifacts, personal source material, credentials, and machine-specific
 ## Repository Model
 
 This repository intentionally contains only original Skills maintained here. Third-party Skills remain separate dependencies and retain their own upstream repositories and licenses.
+
+## License
+
+[MIT](LICENSE) © 2026 Qinghao Huang
