@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "dependencies": [
+    {
+      "name": "Superpowers",
+      "source": "obra/superpowers",
+      "skills": ["*"],
+      "license": "MIT",
+      "purpose": "Reusable software-development workflows such as brainstorming, planning, testing, debugging, review, and verification."
+    },
+    {
+      "name": "Guizang Social Card Skill",
+      "source": "op7418/guizang-social-card-skill",
+      "skills": ["guizang-social-card-skill"],
+      "license": "AGPL-3.0",
+      "purpose": "Discrete social and knowledge cards with one claim or visual idea per card."
+    }
+  ]
+}

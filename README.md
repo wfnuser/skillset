@@ -41,10 +41,22 @@ Alternatively, clone the repository and run:
 ./scripts/install.sh
 ```
 
+Install this collection together with the recommended third-party Skills:
+
+```bash
+./scripts/bootstrap.sh
+```
+
+Preview everything the bootstrap would install without changing the machine:
+
+```bash
+./scripts/bootstrap.sh --dry-run
+```
+
 For local development, link all agents directly to this checkout so edits become visible immediately:
 
 ```bash
-./scripts/install.sh --local
+./scripts/bootstrap.sh --local
 ```
 
 Restart or open a new session after installing so each agent refreshes its Skill catalog.
@@ -78,6 +90,15 @@ Generated artifacts, personal source material, credentials, and machine-specific
 ## Repository Model
 
 This repository intentionally contains only original Skills maintained here. Third-party Skills remain separate dependencies and retain their own upstream repositories and licenses.
+
+Recommended third-party Skills are declared once in [`third-party-skills.json`](third-party-skills.json). The manifest records only installation metadata, purpose, and upstream license; it does not copy third-party source code into this repository. `scripts/bootstrap.sh` installs this repository first and then processes that manifest.
+
+To recommend another third-party Skill, add one entry to the manifest and run:
+
+```bash
+python3 scripts/validate.py
+./scripts/bootstrap.sh --dry-run
+```
 
 ## License
 
