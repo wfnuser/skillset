@@ -1,55 +1,70 @@
 ---
 name: super-reading
-description: Create a fixed three-page paper-reading deck and a matching HTML explainer for research group meetings.
+description: 当用户要求制作或修改 Super Reading、组会论文幻灯片、三页论文速读时使用；独立的详细讲解网页按需制作。
 ---
 
-# Super Reading
+# Super Reading：三页论文精读
 
-Use this skill when the user asks for a Super Reading, paper速读、组会论文 slides, or a compact paper walkthrough.
+用三页讲清楚：作者想解决什么问题，具体做了什么，以及实验支持什么结论。以论文为依据，以原图为主体，用少量中文帮助听众理解。
 
-## Fixed deliverable
+## 一、固定三页，各有分工
 
-Super Reading is **exactly three pages total**. “Three pages” is a fixed count, not a 3–5 page range. Do not add a cover, table of contents, thank-you page, or standalone benchmark page.
+总共 **三页**，不另加封面、目录、致谢或独立评测页。
 
-The three pages have fixed narrative jobs:
+1. **问题与核心思路**：主标题使用论文原题；副标题用一句话说明研究问题。讲清现有困难和作者的关键思路。
+2. **方法与主要贡献**：展示方法流程及真正新增的机制，最多保留 3–4 个关键步骤。训练类论文优先交代数据、训练阶段和监督信号。
+3. **实验与结论**：给出与基线的主要对比，并选择必要的消融。说明指标含义，以及这些结果支持了什么。
 
-1. **问题 + 思路**：论文解决的具体问题、现有方法的关键矛盾、作者的核心 insight。
-2. **具体解决方案和亮点**：方法数据流/算法路径，以及真正新增的机制；最多保留 3–4 个步骤。
-3. **实验结果**：最能支持主张的结果、必要的消融或对照、局限和结果含义。
+标题与结论要准确体现论文的主要贡献。区分研究动机、方法和实验发现，不要用一句背景观察或次要现象代替核心方法；也不要把有训练方法的工作讲成只有评测的数据集论文。
 
-## Content rules
+## 二、优先使用论文原图
 
-- Each page has one clear takeaway and a direct title.
-- Use only claims, numbers, formulas, and figures supported by the paper or clearly label an inference.
-- Prefer one main diagram or evidence block per page; do not turn the deck into a literature survey.
-- Keep formulas readable and explain what each variable means; remove equations that do not change the audience’s understanding.
-- Page 3 must explain what the reported numbers measure, not merely reproduce a table.
-- Separate “论文做了什么” from “对我们项目的启发”. Project implications may appear as a short callout on page 3, but must not be presented as paper results.
+- 先检查论文已有的结构图、流程图、示例、结果图和表格。有合适原图时直接使用，不为了统一配色或方便排版而重新绘制。
+- 优先提取原始矢量图，或从论文 PDF 高分辨率裁剪。避免使用网页缩略图、低清截图，也不要拉伸改变比例。
+- 原图过密时，放大与当前页相关的局部；保留理解所需的图例、坐标、单位、对照组和条件，标明“原论文图 X（局部）”。不能通过裁剪改变结论。
+- 只有论文没有合适图示，或确实需要展示原文没有直接画出的关系时，才补充自绘图，并标注“据论文整理”；对推断另作说明。
+- 图旁放简短来源，如“原论文图 4 · 第 6.2 节”。原图可以保留原有颜色与英文，不强行重做成中文图。
 
-## Output convention
+## 三、每页少字，细节留给讲解
 
-Store deliverables under:
+- 每页一个主结论、一张主图或一组核心证据；辅助说明通常不超过 3 条，每条 1–2 行。
+- 每页自行撰写的中文正文以约 **120–180 字以内**为目标，能更短就更短。标题、页脚和原图内文字不计入此参考值，但原图同样必须清晰可读。
+- 在 1600×1000 的版面上，正文通常使用 28–32 px，不为塞入内容降到 24 px 以下。图中关键标签也要在整页预览时读得清。
+- 内容放不下时，先删去重复表述和次要细节，再调整布局；需要保留的展开解释放到讲稿或独立讲解网页。不要缩字硬塞，也不要因此增加第四页。
+- 不把讲稿直接贴上幻灯片。避免大段背景介绍、堆叠术语和无助于理解的提醒。
+- 中文叙述为主。论文标题、模型名、指标名和常用缩写可保留原文；术语必要时首次给出中文解释，不在同一句里无必要地来回切换语言。
+- 公式只保留理解方法必需的部分，简要解释关键变量。结果页除了数字，还要说明“测什么、与谁比、好在哪里”。
+
+## 四、证据与表述
+
+- 所有主张、数字、公式和图表都需有论文依据，核对所用版本和实验条件；不能凭常识补写训练步骤。
+- 清楚区分“论文的发现”和“对我们项目的启发”。后者按需放一句，并标明是我们的思考，不能当成作者已经验证的结果。
+- 局限只保留会影响核心结论理解的内容，不为凑栏目添加泛泛的免责声明。
+
+## 五、版式与页脚
+
+- 使用 **16:10 白底**，黑灰文字、细分隔线，整套只用一个强调色；论文原图不受配色限制。
+- 重点提示框统一使用浅色底、细边框、左侧强调线和直角；中性的表格或数据块采用统一灰色样式。
+- 原图应占据主要展示区域。检查纵向布局，避免中间大块空白、内容和提示框却挤在底部。
+- 三页页脚固定在同一高度：左侧为 **作者 · 主要机构 · 会议及年份**；右侧按用户要求填写报告人。
+- **主要机构不可省略**，包括公司、学校或研究机构。以当前所讲论文版本的作者署名为准，不使用作者后来的任职机构；多机构可用清晰、常见的简称。无法核实则告知用户，不猜测。
+- 第一页的论文标题、各页重点、图表和页脚保持明确层次；不额外堆放悬浮翻页按钮。
+
+## 六、文件与制作顺序
+
+交付物放在：
 
 ```text
-Obsidian/TheVault/Output/Presentations/Super Reading - <Paper>/
-├── slides.html
-├── index.html                 # optional long-form explainer
-├── <Paper> - Qinghao Huang.pptx  # when PPTX is requested
-└── assets/
+Obsidian/TheVault/Output/Presentations/Super Reading - <论文简称>/
+├── slides.html                    # 三页幻灯片，作为排版基准
+├── index.html                     # 仅在需要时制作的详细讲解网页
+├── <论文简称> - Qinghao Huang.pptx  # 按需导出
+└── assets/                        # 原图、样式等资源
 ```
 
-`slides.html` is the canonical visual source for the three-page deck. The optional `index.html` is a separate long-form reading aid and may contain more detail, but it must not change the three-page structure.
+1. 核对论文、作者机构与发表信息，选好原图和核心结果。
+2. 先制作或修改 `slides.html`，按三页结构控制文字量。
+3. 在实际展示尺寸下逐页渲染检查：图片清晰、文字可读、无溢出遮挡，页脚对齐，图表条件与原文一致。
+4. **用户确认 HTML 后，再按要求导出或更新 PPTX**；使用可用的演示文稿技能，导出后再检查全部三页。独立讲解网页不受三页限制，但不能代替幻灯片。
 
-Workflow: build and revise `slides.html` first. Only generate or update the PPTX after the user approves the HTML version. For PPTX requests, use the installed presentations skill and validate the final deck by rendering all three slides. Keep the slide count exactly three and preserve the information hierarchy of `slides.html`.
-
-## Default visual and writing style
-
-- 16:10 white canvas, black/gray text, thin rules, compact footer, and **one accent color only**. Use the accent for progress bars, tags, callouts, section labels, and emphasis; do not assign separate colors to different mechanisms or metrics. Original paper figures may retain their own colors when reused.
-- Keep container styling consistent: highlighted insight, training, and takeaway boxes should share the same light accent fill, thin border, accent left rule, and square corners; neutral metric/table cards should share a separate gray treatment.
-- Check the vertical composition at the final 16:10 export size. Do not let a `flex: 1` spacer push the mechanism cards and training strip to the bottom while leaving a large empty middle; figures inside a flexible region must grow to use that region, or the region must use explicit compact sizing.
-- For image-backed PPTX export, render the approved HTML at a viewport close to the intended presentation preview (typically 1600×1000 for this 16:10 layout), keep the custom 16:10 ratio, and place the screenshot edge-to-edge on the slide. Do not inflate the viewport width solely for “高清”, because fixed CSS text then becomes visually too small after slide fitting.
-- Avoid slogans, vague section labels, filler subtitles, and presenter narration on slides.
-- Footer convention on **all three pages**: bottom left = `Paper authors · Main affiliations · Venue Year`; bottom right = lecturer/presenter name when requested. **REQUIRED: include the authors’ main affiliations (主要机构：公司、学校或研究机构)**, not just author names and venue.
-- Verify affiliations against the paper's author affiliations for the version being presented, not the authors' current employers. For multi-institution work, include the principal contributing institutions; use recognizable abbreviations if needed for a compact footer. If affiliations cannot be verified, flag this to the user instead of guessing. Keep the footer content and alignment consistent across all three pages and carry the same affiliations into any later PPTX export.
-- On page 1, use the paper title as the main title. Put the paper's motivating problem in the subtitle. Do not use a self-authored question as the main title when the paper title is available.
-- Prefer the paper's original figures, tables, and diagrams over redrawing them. Crop or reuse the source figure with a small source label when it materially improves fidelity; redraw only when the paper has no suitable visual or when the edit is necessary to explain a derived comparison.
+图片式 PPTX 使用约 1600×1000 的排版视口，截图铺满 16:10 页面。提高清晰度时提高渲染像素密度，不单纯放大视口宽度，避免固定字号缩小后难读。导出的标题、内容、作者机构与页脚应与已确认的 HTML 一致。

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Super Reading"
-  short_description: "Create fixed three-page paper-reading slides"
-  default_prompt: "Create exactly three Super Reading pages: problem and idea, concrete solution and novelty, experimental results."
+  display_name: "Super Reading · 三页论文精读"
+  short_description: "制作三页组会论文幻灯片：原图优先、精简文字、讲清方法与实验证据"
+  default_prompt: "请使用 $super-reading 制作三页论文幻灯片，依次介绍问题与核心思路、方法与主要贡献、实验与结论；优先使用论文原图，每页少字。"
